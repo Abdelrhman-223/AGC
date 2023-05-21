@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Corners" table="corners" catalog="agc_db" optimistic-lock="version">
+        <id name="cornerNumber" type="java.lang.Integer">
+            <column name="Corner_Number" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="branch" class="com.agc.www._1_2_MySql_DB_entities.Branch" fetch="select">
+            <column name="Branch_ID" not-null="true" />
+        </many-to-one>
+        <property name="gamesType" type="string">
+            <column name="Games_type" length="45" not-null="true" />
+        </property>
+        <property name="cornerName" type="string">
+            <column name="Corner_Name" length="45" not-null="true" />
+        </property>
+        <property name="requiredAge" type="int">
+            <column name="Required_age" not-null="true" />
+        </property>
+        <property name="numOfMachines" type="java.lang.Integer">
+            <column name="Num_of_machines" />
+        </property>
+        <property name="visitorsNum" type="java.lang.Integer">
+            <column name="visitors_num" />
+        </property>
+        <set name="machines" table="machine" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Corner_Number" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.Machine" />
+        </set>
+        <set name="visitCorners" table="visit_corner" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Corner_Number" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.VisitCorner" />
+        </set>
+    </class>
+</hibernate-mapping>

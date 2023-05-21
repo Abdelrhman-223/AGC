@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Jobs" table="jobs" catalog="agc_db" optimistic-lock="version">
+        <id name="jobId" type="java.lang.Integer">
+            <column name="JobId" />
+            <generator class="identity" />
+        </id>
+        <property name="jobTitle" type="string">
+            <column name="Job_title" length="45" not-null="true" unique="true" />
+        </property>
+        <set name="employees" table="employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="JobId" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.Employee" />
+        </set>
+    </class>
+</hibernate-mapping>

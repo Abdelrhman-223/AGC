@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.LsLifted" table="ls_lifted" catalog="agc_db" optimistic-lock="version">
+        <id name="lsLiftedId" type="java.lang.Integer">
+            <column name="ls_lifted_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="machine" class="com.finalagc.www._1_2_MySql_DB_entities.Machine" fetch="select">
+            <column name="Machine_ID" not-null="true" />
+        </many-to-one>
+        <property name="liftedData" type="date">
+            <column name="Lifted_Data" length="10" not-null="true" />
+        </property>
+        <property name="liftedReason" type="string">
+            <column name="Lifted_reason" length="250" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

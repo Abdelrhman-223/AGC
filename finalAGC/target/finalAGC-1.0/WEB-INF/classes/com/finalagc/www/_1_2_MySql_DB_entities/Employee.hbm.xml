@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.Employee" table="employee" catalog="agc_db" optimistic-lock="version">
+        <id name="employeeId" type="java.lang.Integer">
+            <column name="EmployeeID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="branch" class="com.finalagc.www._1_2_MySql_DB_entities.Branch" fetch="select">
+            <column name="Branch_ID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="jobs" class="com.finalagc.www._1_2_MySql_DB_entities.Jobs" fetch="select">
+            <column name="JobId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="shift" class="com.finalagc.www._1_2_MySql_DB_entities.Shift" fetch="select">
+            <column name="ShiftID" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="Name" length="50" not-null="true" />
+        </property>
+        <property name="dateOfBirth" type="string">
+            <column name="Date_of_birth" length="50" not-null="true" />
+        </property>
+        <property name="nationalNumber" type="string">
+            <column name="National_number" length="25" not-null="true" unique="true" />
+        </property>
+        <property name="employeeImage" type="binary">
+            <column name="employee_image" />
+        </property>
+        <property name="employeePassword" type="string">
+            <column name="employee_password" length="50" not-null="true" />
+        </property>
+        <set name="makeContracts" table="make_contract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.MakeContract" />
+        </set>
+        <set name="employeePhoneNumberses" table="employee_phone_numbers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.EmployeePhoneNumbers" />
+        </set>
+        <set name="repairs" table="repair" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.Repair" />
+        </set>
+        <set name="taskses" table="tasks" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Employee_EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.Tasks" />
+        </set>
+        <set name="competitions" table="competition" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.Competition" />
+        </set>
+        <set name="employeeAddresses" table="employee_address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.EmployeeAddress" />
+        </set>
+        <set name="takSalaries" table="tak_salary" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.TakSalary" />
+        </set>
+        <set name="employeeAttendanceTimes" table="employee_attendance_time" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EmployeeID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.EmployeeAttendanceTime" />
+        </set>
+    </class>
+</hibernate-mapping>

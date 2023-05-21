@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.BranchDays" table="branch_days" catalog="agc_db" optimistic-lock="version">
+        <composite-id name="id" class="com.finalagc.www._1_2_MySql_DB_entities.BranchDaysId">
+            <key-property name="branchId" type="int">
+                <column name="Branch_ID" />
+            </key-property>
+            <key-property name="day" type="string">
+                <column name="day" length="20" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="branch" class="com.finalagc.www._1_2_MySql_DB_entities.Branch" update="false" insert="false" fetch="select">
+            <column name="Branch_ID" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

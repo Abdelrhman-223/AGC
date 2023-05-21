@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.User" table="user" catalog="agc_db" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="UserID" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="User_name" length="50" not-null="true" />
+        </property>
+        <property name="userGender" type="string">
+            <column name="User_gender" length="30" not-null="true" />
+        </property>
+        <property name="birthDate" type="date">
+            <column name="Birth_date" length="10" not-null="true" />
+        </property>
+        <set name="userPhonNumbers" table="user_phon_number" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserPhonNumber" />
+        </set>
+        <set name="userAddresses" table="user_address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserAddress" />
+        </set>
+        <set name="userWinCompetitions" table="user_win_competition" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserWinCompetition" />
+        </set>
+        <set name="userUseMachines" table="user_use_machine" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserUseMachine" />
+        </set>
+        <set name="userWinPrizes" table="user_win_prize" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserWinPrize" />
+        </set>
+        <set name="joinedUsers" table="joined_user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.JoinedUser" />
+        </set>
+        <set name="visitBranches" table="visit_branch" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.VisitBranch" />
+        </set>
+        <set name="userSubscriptions" table="user_subscription" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserSubscription" />
+        </set>
+        <set name="visitCorners" table="visit_corner" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.VisitCorner" />
+        </set>
+    </class>
+</hibernate-mapping>

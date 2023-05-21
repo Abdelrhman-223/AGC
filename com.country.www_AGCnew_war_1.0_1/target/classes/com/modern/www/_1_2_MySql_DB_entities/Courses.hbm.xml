@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 25, 2021 8:15:14 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.modern.www._1_2_MySql_DB_entities.Courses" table="courses" catalog="world" optimistic-lock="version">
+        <id name="courseCode" type="string">
+            <column name="course_code" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="courseName" type="string">
+            <column name="course_name" length="100" />
+        </property>
+        <set name="studentCourseses" table="student_courses" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="course_code" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.modern.www._1_2_MySql_DB_entities.StudentCourses" />
+        </set>
+    </class>
+</hibernate-mapping>

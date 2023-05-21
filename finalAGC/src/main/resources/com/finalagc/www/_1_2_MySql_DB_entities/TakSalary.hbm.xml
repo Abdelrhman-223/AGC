@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.TakSalary" table="tak_salary" catalog="agc_db" optimistic-lock="version">
+        <id name="takSalaryId" type="java.lang.Integer">
+            <column name="tak_salary_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="contract" class="com.finalagc.www._1_2_MySql_DB_entities.Contract" fetch="select">
+            <column name="Contract_Id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="employee" class="com.finalagc.www._1_2_MySql_DB_entities.Employee" fetch="select">
+            <column name="EmployeeID" not-null="true" />
+        </many-to-one>
+        <property name="totalSalary" type="java.lang.Float">
+            <column name="Total_salary" precision="12" scale="0" />
+        </property>
+        <property name="dateOfReceipt" type="date">
+            <column name="Date_of_receipt" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.CompetitionPrizes" table="competition_prizes" catalog="agc_db" optimistic-lock="version">
+        <id name="competitionPrizesId" type="int">
+            <column name="competition_prizes_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="competition" class="com.agc.www._1_2_MySql_DB_entities.Competition" fetch="select">
+            <column name="Competition_Id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="prizes" class="com.agc.www._1_2_MySql_DB_entities.Prizes" fetch="select">
+            <column name="Prize_ID" not-null="true" />
+        </many-to-one>
+        <property name="prizeRank" type="int">
+            <column name="Prize_Rank" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

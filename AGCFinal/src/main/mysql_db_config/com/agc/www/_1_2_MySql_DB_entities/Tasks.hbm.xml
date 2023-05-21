@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Tasks" table="tasks" catalog="agc_db" optimistic-lock="version">
+        <id name="taskId" type="int">
+            <column name="Task_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="employee" class="com.agc.www._1_2_MySql_DB_entities.Employee" fetch="select">
+            <column name="Employee_EmployeeID" not-null="true" />
+        </many-to-one>
+        <property name="taskDescription" type="string">
+            <column name="Task_description" not-null="true" />
+        </property>
+        <property name="startingDate" type="timestamp">
+            <column name="starting_date" length="19" not-null="true" />
+        </property>
+        <property name="finishingDate" type="timestamp">
+            <column name="Finishing_date" length="19" not-null="true" />
+        </property>
+        <property name="duration" type="int">
+            <column name="Duration" not-null="true" />
+        </property>
+        <property name="taskTitle" type="string">
+            <column name="Task_title" length="150" not-null="true" />
+        </property>
+        <property name="taskStatues" type="string">
+            <column name="Task_statues" length="11" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

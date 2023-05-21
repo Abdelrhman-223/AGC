@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styleSheets/StyleSheet.css">
+    <title>Accounter Page</title>
+</head>
+<body>
+    <header class="frameHeader">
+        <img src="../assets/Images/Logo.png" alt="Logo" class="headerLogo">
+        <h2 class="empName">Accounter Name</h2>
+    </header>
+    <section class="tapBar">
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker1Tap()">Info</button>
+            <div id="marker1" class="tabButtonMarker"></div>
+        </div>
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker2Tap()">Attendance</button>
+            <div id="marker2" class="tabButtonMarker hide"></div>
+        </div>
+       <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker3Tap()">Salaries</button>
+            <div id="marker3" class="tabButtonMarker hide"></div>
+        </div>
+       <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker4Tap()">Outcomes</button>
+            <div id="marker4" class="tabButtonMarker hide"></div>
+        </div>
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker5Tap()">Incomes</button>
+            <div id="marker5" class="tabButtonMarker hide"></div>
+        </div>
+        <div class="tabButtonBody hide">
+             <button class="tabButton" onclick="openMarker6Tap()">New Tap4</button>
+             <div id="marker6" class="tabButtonMarker hide"></div>
+         </div>
+        <div class="tabButtonBody hide">
+             <button class="tabButton" onclick="openMarker7Tap()">New Tap5</button>
+             <div id="marker7" class="tabButtonMarker hide"></div>
+         </div>
+        <div class="tabButtonBody hide">
+             <button class="tabButton" onclick="openMarker8Tap()">New Tap6</button>
+             <div id="marker8" class="tabButtonMarker hide"></div>
+         </div>
+        
+    </section>
+    <section class="tapBody">
+        <!--start Info tap page -->
+        <section id="tapBodyMarker1">
+            <div class="empDataSection">
+                <div class="empData">
+                    <h1 class="sectionTitle">Personal Data</h1>
+                    <h3>ID:</h3>
+                    <h3>Name:</h3>
+                    <h3>National number:</h3>
+                    <h3>Phone number:</h3>
+                    <h3>Address:</h3>
+                    <h3>Date of birth:</h3>
+                </div>
+                <div class="image">
+                    <img src="../assets/Images/user1.jpg" alt="User Image">
+                </div>
+            </div>
+            <div class="empDataWithoutBG">
+                <div class="empData">
+                    <h1 class="sectionTitle">Job Data</h1>
+                    <h3>Job Title:</h3>
+                    <h3>Job Place:</h3>
+                </div>
+            </div>
+            <div class="empDataSection">
+                <div class="empData">
+                    <h1 class="sectionTitle">Shift Data</h1>
+                    <h3>Shift Name:</h3>
+                    <h3>Shift start time:</h3>
+                    <h3>Shift end time:</h3>
+                </div>
+            </div>
+            <div class="empDataWithoutBG">
+                <div class="empData">
+                    <h1 class="sectionTitle">Corner Data</h1>
+                    <h3>Corner Number:</h3>
+                    <h3>Corner Name:</h3>
+                    <h3>Games type:</h3>
+                </div>
+            </div>
+            <div class="empDataSection">
+                <div class="empData">
+                    <h1 class="sectionTitle">Contract Data</h1>
+                    <h3>Contract Id:</h3>
+                    <h3>Main salary:</h3>
+                    <h3>Contract status:</h3>
+                    <h3>Employment status:</h3>
+                    <h3>Annual salary increase rate:</h3>
+                    <h3>Work start date:</h3>
+                </div>
+            </div>
+        </section>
+        <!--end Info tap page -->
+
+        <!--start Attendance tap page -->
+        <section id="tapBodyMarker2" class="hide">
+            <section class="tapTapBar">
+                <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTapMarker1()">All</button>
+                    <div id="tapMarker1" class="tabButtonMarker"></div>
+                </div>
+                <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTapMarker2()">Attendance</button>
+                    <div id="tapMarker2" class="tabButtonMarker hide"></div>
+                </div>
+               <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTapMarker3()">Absence</button>
+                    <div id="tapMarker3" class="tabButtonMarker hide"></div>
+                </div>
+            </section>
+
+            <!--start All tap page -->
+            <section id="internalTapBodyMarker1" class="internalTapBody">
+                <div class="allAttendanceTap">
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>2/5/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:00:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:10:00PM</label>
+                    </div>
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Absence</label>
+                        <div class="divider">.</div>
+                        <label>1/5/2023</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>30/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>7:58:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:03:00PM</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>29/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:02:00AM</label>
+                        <div class="divider">.</div>
+                        <label>1:59:10PM</label>
+                    </div>
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Absence</label>
+                        <div class="divider">.</div>
+                        <label>28//2023</label>
+                    </div>
+                </div>
+            </section>
+            <!--end All tap page -->
+
+            <!--start Attendance tap page -->
+            <section id="internalTapBodyMarker2" class="internalTapBody hide">
+                <div class="attendanceTap">
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>2/5/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:00:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:10:00PM</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>30/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>7:58:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:03:00PM</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>29/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:02:00AM</label>
+                        <div class="divider">.</div>
+                        <label>1:59:10PM</label>
+                    </div>
+                </div>
+            </section>
+            <!--end Attendance tap page -->
+
+            <!--start Absence tap page -->
+            <section id="internalTapBodyMarker3" class="internalTapBody hide">
+                <div class="absenceTap">
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>1/5/2023</label>
+                    </div>
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>28//2023</label>
+                    </div>
+                </div>
+            </section>
+            <!--end Absence tap page -->
+
+        </section>
+        <!--end Attendance tap page -->
+        
+        <!--start Salaries tap page -->
+        <section id="tapBodyMarker3" class="hide">
+            <section class="internalTapBody">
+                <div class="info_employee">
+                    <form >
+                        <div class="AccData">
+                            <div>ID:4190970</div>     
+                            <div>main salary: 3950</div>
+                            <div>final salary: 4195</div>      
+                            <div>additions : 300</div>
+                            <div>descounts : 55</div>
+                        </div>
+                        <button class="button alignCenter" style="background-color: #2A3D45; ">Get</button>
+                    </form>
+                </div>
+                <div class="info_employee">
+                    <form >
+                        <div class="AccData">
+                            <div>ID:4190970</div>     
+                            <div>main salary: 3950</div>
+                            <div>final salary: 4195</div>      
+                            <div>additions : 300</div>
+                            <div>descounts : 55</div>
+                        </div>
+                        <button class="button alignCenter" style="background-color: #2A3D45; ">Get</button>
+                    </form>
+                </div>
+                <div class="info_employee">
+                    <form >
+                        <div class="AccData">
+                            <div>ID:4190970</div>     
+                            <div>main salary: 3950</div>
+                            <div>final salary: 4195</div>      
+                            <div>additions : 300</div>
+                            <div>descounts : 55</div>
+                        </div>
+                        <button class="button alignCenter" style="background-color: #2A3D45; ">Get</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+        <!--end Salaries tap page -->
+
+        <!--start Outcomes tap page -->
+        <section id="tapBodyMarker4" class="hide">
+            <section class="internalTapBody">
+                outcomes tap
+            </section>
+        </section>
+        <!--end Outcomes tap page -->
+
+        <!--start Incomes tap page -->
+        <section id="tapBodyMarker5" class="hide">
+            <section class="internalTapBody">
+                incomes tap
+            </section>
+        </section>
+        <!--end Incomes tap page -->
+        
+        <!--start New tap page -->
+        <section id="tapBodyMarker6" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 6</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+        <!--start New tap page -->
+        <section id="tapBodyMarker7" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 7</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+        <!--start New tap page -->
+        <section id="tapBodyMarker8" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 8</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+        
+    </section>
+    <script src="../Js/jsScript.js"></script>
+</body>
+</html>

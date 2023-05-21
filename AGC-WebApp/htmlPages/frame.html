@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styleSheets/StyleSheet.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header class="frameHeader">
+        <img src="../assets/Images/Logo.png" alt="Logo" class="headerLogo">
+        <h2 class="empName">Employee Name</h2>
+    </header>
+    <div class="tapBar">
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker1Tap()">Tap1</button>
+            <div id="marker1" class="tabButtonMarker"></div>
+        </div>
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker2Tap()">Tap2</button>
+            <div id="marker2" class="tabButtonMarker hide"></div>
+        </div>
+       <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker3Tap()">Tap3</button>
+            <div id="marker3" class="tabButtonMarker hide"></div>
+        </div>
+       <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker4Tap()">Tap4</button>
+            <div id="marker4" class="tabButtonMarker hide"></div>
+        </div>
+    </div>
+    <section class="tapBody">
+        <section id="tapBodyMarker1">
+            <div class="image">
+                <img src="../assets/Images/user2.jpg" alt="User Image">
+            </div>
+        </section>
+        <section id="tapBodyMarker2" class="hide">
+            <div class="image">
+                <img src="../assets/Images/user1.jpg" alt="User Image">
+            </div>
+        </section>
+        <section id="tapBodyMarker3" class="hide">
+            <div class="image">
+                <img src="../assets/Images/user2.jpg" alt="User Image">
+            </div>
+        </section>
+        <section id="tapBodyMarker4" class="hide">
+            <div class="image">
+                <img src="../assets/Images/user1.jpg" alt="User Image">
+            </div>
+        </section>
+    </section>
+    <script src="../Js/jsScript.js"></script>
+</body>
+</html>

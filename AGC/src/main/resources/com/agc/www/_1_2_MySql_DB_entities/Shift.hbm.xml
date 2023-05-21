@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Shift" table="shift" catalog="agc_db" optimistic-lock="version">
+        <id name="shiftId" type="java.lang.Integer">
+            <column name="ShiftID" />
+            <generator class="identity" />
+        </id>
+        <property name="shiftName" type="string">
+            <column name="Shift_Name" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="shiftStartTime" type="time">
+            <column name="Shift_Start_Time" length="8" not-null="true" />
+        </property>
+        <property name="shiftEndTime" type="time">
+            <column name="Shift_End_Time" length="8" not-null="true" />
+        </property>
+        <set name="employeeAttendanceTimes" table="employee_attendance_time" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ShiftID" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.EmployeeAttendanceTime" />
+        </set>
+        <set name="employees" table="employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ShiftID" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.Employee" />
+        </set>
+    </class>
+</hibernate-mapping>

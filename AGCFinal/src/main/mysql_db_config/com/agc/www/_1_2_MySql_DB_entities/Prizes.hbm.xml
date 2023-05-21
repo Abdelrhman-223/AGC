@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Prizes" table="prizes" catalog="agc_db" optimistic-lock="version">
+        <id name="prizeId" type="int">
+            <column name="Prize_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="machine" class="com.agc.www._1_2_MySql_DB_entities.Machine" fetch="select">
+            <column name="Machine_ID" not-null="true" />
+        </many-to-one>
+        <property name="prizeName" type="string">
+            <column name="`Prize Name`" length="45" />
+        </property>
+        <property name="prizeType" type="string">
+            <column name="Prize_type" length="45" />
+        </property>
+        <property name="prizePrice" type="java.lang.Float">
+            <column name="Prize_price" precision="12" scale="0" />
+        </property>
+        <set name="competitionPrizeses" table="competition_prizes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Prize_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.CompetitionPrizes" />
+        </set>
+        <set name="userWinPrizes" table="user_win_prize" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Prize_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.UserWinPrize" />
+        </set>
+    </class>
+</hibernate-mapping>

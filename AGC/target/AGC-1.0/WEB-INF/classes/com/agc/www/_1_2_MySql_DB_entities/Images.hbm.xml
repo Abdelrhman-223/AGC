@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Images" table="images" catalog="agc_db" optimistic-lock="version">
+        <id name="imageId" type="int">
+            <column name="image_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="image" type="binary">
+            <column name="image" />
+        </property>
+        <property name="imageOwnerId" type="java.lang.Integer">
+            <column name="image_owner_id" />
+        </property>
+    </class>
+</hibernate-mapping>

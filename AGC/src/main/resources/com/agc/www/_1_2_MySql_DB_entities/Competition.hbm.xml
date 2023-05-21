@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.Competition" table="competition" catalog="agc_db" optimistic-lock="version">
+        <id name="competitionId" type="java.lang.Integer">
+            <column name="Competition_Id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="employee" class="com.agc.www._1_2_MySql_DB_entities.Employee" fetch="select">
+            <column name="EmployeeID" not-null="true" />
+        </many-to-one>
+        <property name="competitionName" type="string">
+            <column name="Competition_name" length="45" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="Start_date" length="10" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="End_date" length="10" />
+        </property>
+        <set name="competitionPrizeses" table="competition_prizes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Competition_Id" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.CompetitionPrizes" />
+        </set>
+        <set name="userWinCompetitions" table="user_win_competition" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Competition_Id" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.UserWinCompetition" />
+        </set>
+        <set name="joinedUsers" table="joined_user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Competition_Id" not-null="true" />
+            </key>
+            <one-to-many class="com.agc.www._1_2_MySql_DB_entities.JoinedUser" />
+        </set>
+    </class>
+</hibernate-mapping>

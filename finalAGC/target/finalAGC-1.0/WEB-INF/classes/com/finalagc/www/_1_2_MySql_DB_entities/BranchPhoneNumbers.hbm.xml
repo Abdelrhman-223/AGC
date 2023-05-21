@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.BranchPhoneNumbers" table="branch_phone_numbers" catalog="agc_db" optimistic-lock="version">
+        <id name="branchPhoneNumber" type="int">
+            <column name="Branch_Phone_Number" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="branch" class="com.finalagc.www._1_2_MySql_DB_entities.Branch" fetch="select">
+            <column name="Branch_ID" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

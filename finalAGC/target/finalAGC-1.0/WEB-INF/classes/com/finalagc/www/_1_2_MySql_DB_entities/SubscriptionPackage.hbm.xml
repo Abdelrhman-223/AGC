@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.SubscriptionPackage" table="subscription_package" catalog="agc_db" optimistic-lock="version">
+        <id name="packageId" type="java.lang.Integer">
+            <column name=" Package_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="packageName" type="string">
+            <column name="Package_name" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="packagePrice" type="float">
+            <column name="Package_price" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="packageDuration" type="int">
+            <column name="Package_Duration" not-null="true">
+                <comment>The duration in days</comment>
+            </column>
+        </property>
+        <property name="packageLimits" type="int">
+            <column name="Package_limits" not-null="true">
+                <comment>Package limits is times of use the machiens</comment>
+            </column>
+        </property>
+        <set name="permittedMachines" table="permitted_machine" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Package_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.PermittedMachine" />
+        </set>
+        <set name="userSubscriptions" table="user_subscription" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Package_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.finalagc.www._1_2_MySql_DB_entities.UserSubscription" />
+        </set>
+    </class>
+</hibernate-mapping>

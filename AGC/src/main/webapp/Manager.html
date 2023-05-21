@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styleSheets/StyleSheet.css">
+        <title>Manager Page</title>
+    </head>
+
+    <body>
+        <header class="frameHeader">
+            <img src="assets/Images/Logo.png" alt="Logo" class="headerLogo">
+            <h2 class="empName">Manager Name</h2>
+        </header>
+        <section class="tapBar">
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker1Tap()">Info</button>
+                <div id="marker1" class="tabButtonMarker"></div>
+            </div>
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker2Tap()">Attendance</button>
+                <div id="marker2" class="tabButtonMarker hide"></div>
+            </div>
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker3Tap()">Employees</button>
+                <div id="marker3" class="tabButtonMarker hide"></div>
+            </div>
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker4Tap()">Branches</button>
+                <div id="marker4" class="tabButtonMarker hide"></div>
+            </div>
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker5Tap()">Corners</button>
+                <div id="marker5" class="tabButtonMarker hide"></div>
+            </div>
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker6Tap()">Packages</button>
+                <div id="marker6" class="tabButtonMarker hide"></div>
+            </div>
+            <div class="tabButtonBody">
+                <button class="tabButton" onclick="openMarker7Tap()">Competition</button>
+                <div id="marker7" class="tabButtonMarker hide"></div>
+            </div>
+            <div class="tabButtonBody hide">
+                <button class="tabButton" onclick="openMarker8Tap()">New Tap</button>
+                <div id="marker8" class="tabButtonMarker hide"></div>
+            </div>
+        </section>
+        <section class="tapBody">
+            <!--start Info tap page -->
+            <section id="tapBodyMarker1">
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Personal Data</h1>
+                        <h3>ID:</h3>
+                        <h3>Name:</h3>
+                        <h3>National number:</h3>
+                        <h3>Phone number:</h3>
+                        <h3>Address:</h3>
+                        <h3>Date of birth:</h3>
+                    </div>
+                    <div class="image">
+                        <img src="assets/Images/user1.jpg" alt="User Image">
+                    </div>
+                </div>
+                <div class="empDataWithoutBG">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Job Data</h1>
+                        <h3>Job Title:</h3>
+                        <h3>Job Place:</h3>
+                    </div>
+                </div>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Shift Data</h1>
+                        <h3>Shift Name:</h3>
+                        <h3>Shift start time:</h3>
+                        <h3>Shift end time:</h3>
+                    </div>
+                </div>
+                <div class="empDataWithoutBG">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Corner Data</h1>
+                        <h3>Corner Number:</h3>
+                        <h3>Corner Name:</h3>
+                        <h3>Games type:</h3>
+                    </div>
+                </div>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Contract Data</h1>
+                        <h3>Contract Id:</h3>
+                        <h3>Main salary:</h3>
+                        <h3>Contract status:</h3>
+                        <h3>Employment status:</h3>
+                        <h3>Annual salary increase rate:</h3>
+                        <h3>Work start date:</h3>
+                    </div>
+                </div>
+            </section>
+            <!--end Info tap page -->
+
+            <!--start Attendance tap page -->
+            <section id="tapBodyMarker2" class="hide">
+                <section class="tapTapBar">
+                    <div class="tabButtonBody">
+                        <button class="tabButton" onclick="openTapMarker1()">All</button>
+                        <div id="tapMarker1" class="tabButtonMarker"></div>
+                    </div>
+                    <div class="tabButtonBody">
+                        <button class="tabButton" onclick="openTapMarker2()">Attendance</button>
+                        <div id="tapMarker2" class="tabButtonMarker hide"></div>
+                    </div>
+                    <div class="tabButtonBody">
+                        <button class="tabButton" onclick="openTapMarker3()">Absence</button>
+                        <div id="tapMarker3" class="tabButtonMarker hide"></div>
+                    </div>
+                </section>
+
+                <!--start All tap page -->
+                <section id="internalTapBodyMarker1" class="internalTapBody">
+                    <div class="allAttendanceTap">
+                        <div class="AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>2/5/2023</label>
+                            <div class="divider">.</div>
+                            <label>8:00:00AM</label>
+                            <div class="divider">.</div>
+                            <label>2:10:00PM</label>
+                        </div>
+                        <div class="AbsenceDataField AttendanceDataField">
+                            <label>Absence</label>
+                            <div class="divider">.</div>
+                            <label>1/5/2023</label>
+                        </div>
+                        <div class="AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>30/4/2023</label>
+                            <div class="divider">.</div>
+                            <label>7:58:00AM</label>
+                            <div class="divider">.</div>
+                            <label>2:03:00PM</label>
+                        </div>
+                        <div class="AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>29/4/2023</label>
+                            <div class="divider">.</div>
+                            <label>8:02:00AM</label>
+                            <div class="divider">.</div>
+                            <label>1:59:10PM</label>
+                        </div>
+                        <div class="AbsenceDataField AttendanceDataField">
+                            <label>Absence</label>
+                            <div class="divider">.</div>
+                            <label>28//2023</label>
+                        </div>
+                    </div>
+                </section>
+                <!--end All tap page -->
+
+                <!--start Attendance tap page -->
+                <section id="internalTapBodyMarker2" class="internalTapBody hide">
+                    <div class="attendanceTap">
+                        <div class="AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>2/5/2023</label>
+                            <div class="divider">.</div>
+                            <label>8:00:00AM</label>
+                            <div class="divider">.</div>
+                            <label>2:10:00PM</label>
+                        </div>
+                        <div class="AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>30/4/2023</label>
+                            <div class="divider">.</div>
+                            <label>7:58:00AM</label>
+                            <div class="divider">.</div>
+                            <label>2:03:00PM</label>
+                        </div>
+                        <div class="AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>29/4/2023</label>
+                            <div class="divider">.</div>
+                            <label>8:02:00AM</label>
+                            <div class="divider">.</div>
+                            <label>1:59:10PM</label>
+                        </div>
+                    </div>
+                </section>
+                <!--end Attendance tap page -->
+
+                <!--start Absence tap page -->
+                <section id="internalTapBodyMarker3" class="internalTapBody hide">
+                    <div class="absenceTap">
+                        <div class="AbsenceDataField AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>1/5/2023</label>
+                        </div>
+                        <div class="AbsenceDataField AttendanceDataField">
+                            <label>Attendance</label>
+                            <div class="divider">.</div>
+                            <label>28//2023</label>
+                        </div>
+                    </div>
+                </section>
+                <!--end Absence tap page -->
+
+            </section>
+
+            <!--end Attendance tap page -->
+            <!--start Employees tap page -->
+
+            <section id="tapBodyMarker3" class="hide">
+                <br>
+                <button class="button alignCenter" formaction="htmlPages/employee.html">Add Employee</button>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Employee Data</h1>
+                        <h3>Employee ID:</h3>
+                        <h3>Employee Name:</h3>
+                        <h3>Employee Job:</h3>
+                    </div>
+                    <div class="image">
+                        <img src="assets/Images/user1.jpg" alt="User Image">
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Employee Data</h1>
+                        <h3>Employee ID:</h3>
+                        <h3>Employee Name:</h3>
+                        <h3>Employee Job:</h3>
+                    </div>
+                    <div class="image">
+                        <img src="assets/Images/user1.jpg" alt="User Image">
+                    </div>
+                </div>
+            </section>
+            <!--end Employees tap page -->
+
+            <!--start Branches tap page -->
+
+            <section id="tapBodyMarker4" class="hide">
+                <br>
+                <button class="button alignCenter" formaction="htmlPages/employee.html">Add Branch</button>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Branche Data</h1>
+                        <h3>Branche ID:</h3>
+                        <h3>Branche Name:</h3>
+                        <h3>Branche Work days:</h3>
+                        <h3>Branch phone number:</h3>
+
+                    </div>
+                    <div class="image">
+                        <img src="assets/Images/th.jpg" alt="User Image">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Branche Data</h1>
+                        <h3>Branche ID:</h3>
+                        <h3>Branche Name:</h3>
+                        <h3>Branche Work days:</h3>
+                        <h3>Branch phone number:</h3>
+
+                    </div>
+                    <div class="image">
+                        <img src="assets/Images/OIPp.jpg" alt="User Image">
+                    </div>
+                </div>
+            </section>
+            <!--end Branches tap page -->
+
+            <!--start Corners tap page -->
+            <section id="tapBodyMarker5" class="hide">
+                <br>
+                <button class="button alignCenter" formaction="htmlPages/employee.html">Add Corners</button>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Corners Data</h1>
+                        <h3>Corners Number:</h3>
+                        <h3>Corners Name:</h3>
+                        <h3>Corners Games type:</h3>
+                        <h3>Required age:</h3>
+
+                    </div>
+                    <div class="image">
+                        <img src="assets/Images/OIP.jpg" alt="User Image">
+                    </div>
+
+            </section>
+            <!--end Corners tap page -->
+
+            <!--start Packages tap page -->
+            <section id="tapBodyMarker6" class="hide">
+                <br>
+                <button class="button alignCenter" formaction="htmlPages/employee.html">Add Package</button>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Packages Data</h1>
+                        <h3>Packages ID:</h3>
+                        <h3>Packages Name:</h3>
+                        <h3>Package price:</h3>
+                        <h3>Permitted machines:</h3>
+                        <h3>Duration:</h3>
+                        <h3>Limits:</h3>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h3>Packages ID:</h3>
+                        <h3>Packages Name:</h3>
+                        <h3>Package price:</h3>
+                        <h3>Permitted machines:</h3>
+                        <h3>Duration:</h3>
+                        <h3>Limits:</h3>
+
+                    </div>
+                </div>
+            </section>
+            <!--end Packages tap page -->
+
+            <!--start New tap page -->
+            <section id="tapBodyMarker7" class="hide">
+                <br>
+                <button class="button alignCenter" formaction="htmlPages/employee.html">Add Competition</button>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Competition Data</h1>
+                        <h3>Competition ID:</h3>
+                        <h3>Competition Name:</h3>
+                        <h3>Competition price:</h3>
+                        <h3>Competition Permitted machinesr:</h3>
+                        <h3>Competition Duration:</h3>
+                        <h3>Competition Limits:</h3>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="empDataSection">
+                    <div class="empData">
+                        <h1 class="sectionTitle">Competition Data</h1>
+                        <h3>Competition ID:</h3>
+                        <h3>Competition Name:</h3>
+                        <h3>Competition price:</h3>
+                        <h3>Competition Permitted machinesr:</h3>
+                        <h3>Competition Duration:</h3>
+                        <h3>Competition Limits:</h3>
+                    </div>
+                </div>
+            </section>
+            <!--end New tap page -->
+
+            <!--start New tap page -->
+            <section id="tapBodyMarker8" class="hide">
+                <section class="internalTapBody">
+                    <h1>Tap 8</h1>
+                </section>
+            </section>
+            <!--end New tap page -->
+
+        </section>
+        <script src="Js/jsScript.js"></script>
+
+    </body>
+
+</html>

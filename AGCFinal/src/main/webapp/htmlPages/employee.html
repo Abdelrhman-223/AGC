@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styleSheets/StyleSheet.css">
+    <title>Employee Page</title>
+</head>
+<body>
+    <header class="frameHeader">
+        <img src="../assets/Images/Logo.png" alt="Logo" class="headerLogo">
+        <h2 class="empName">Employee Name</h2>
+    </header>
+    <section class="tapBar">
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker1Tap()">Info</button>
+            <div id="marker1" class="tabButtonMarker"></div>
+        </div>
+        <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker2Tap()">Attendance</button>
+            <div id="marker2" class="tabButtonMarker hide"></div>
+        </div>
+       <div class="tabButtonBody">
+            <button class="tabButton" onclick="openMarker3Tap()">Tasks</button>
+            <div id="marker3" class="tabButtonMarker hide"></div>
+        </div>
+        <div class="tabButtonBody hide">
+             <button class="tabButton" onclick="openMarker4Tap()">New Tap2</button>
+             <div id="marker4" class="tabButtonMarker hide"></div>
+         </div>
+         <div class="tabButtonBody hide">
+              <button class="tabButton" onclick="openMarker5Tap()">New Tap3</button>
+              <div id="marker5" class="tabButtonMarker hide"></div>
+          </div>
+         <div class="tabButtonBody hide">
+              <button class="tabButton" onclick="openMarker6Tap()">New Tap4</button>
+              <div id="marker6" class="tabButtonMarker hide"></div>
+          </div>
+         <div class="tabButtonBody hide">
+              <button class="tabButton" onclick="openMarker7Tap()">New Tap5</button>
+              <div id="marker7" class="tabButtonMarker hide"></div>
+          </div>
+         <div class="tabButtonBody hide">
+              <button class="tabButton" onclick="openMarker8Tap()">New Tap6</button>
+              <div id="marker8" class="tabButtonMarker hide"></div>
+          </div>
+    </section>
+    <section class="tapBody">
+        <!--start Info tap page -->
+        <section id="tapBodyMarker1">
+            <div class="empDataSection">
+                <div class="empData">
+                    <h1 class="sectionTitle">Personal Data</h1>
+                    <h3>ID:</h3>
+                    <h3>Name:</h3>
+                    <h3>National number:</h3>
+                    <h3>Phone number:</h3>
+                    <h3>Address:</h3>
+                    <h3>Date of birth:</h3>
+                </div>
+                <div class="image">
+                    <img src="../assets/Images/user1.jpg" alt="User Image">
+                </div>
+            </div>
+            <div class="empDataWithoutBG">
+                <div class="empData">
+                    <h1 class="sectionTitle">Job Data</h1>
+                    <h3>Job Title:</h3>
+                    <h3>Job Place:</h3>
+                </div>
+            </div>
+            <div class="empDataSection">
+                <div class="empData">
+                    <h1 class="sectionTitle">Shift Data</h1>
+                    <h3>Shift Name:</h3>
+                    <h3>Shift start time:</h3>
+                    <h3>Shift end time:</h3>
+                </div>
+            </div>
+            <div class="empDataWithoutBG">
+                <div class="empData">
+                    <h1 class="sectionTitle">Corner Data</h1>
+                    <h3>Corner Number:</h3>
+                    <h3>Corner Name:</h3>
+                    <h3>Games type:</h3>
+                </div>
+            </div>
+            <div class="empDataSection">
+                <div class="empData">
+                    <h1 class="sectionTitle">Contract Data</h1>
+                    <h3>Contract Id:</h3>
+                    <h3>Main salary:</h3>
+                    <h3>Contract status:</h3>
+                    <h3>Employment status:</h3>
+                    <h3>Annual salary increase rate:</h3>
+                    <h3>Work start date:</h3>
+                </div>
+            </div>
+        </section>
+        <!--end Info tap page -->
+
+        <!--start Attendance tap page -->
+        <section id="tapBodyMarker2" class="hide">
+            <section class="tapTapBar">
+                <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTapMarker1()">All</button>
+                    <div id="tapMarker1" class="tabButtonMarker"></div>
+                </div>
+                <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTapMarker2()">Attendance</button>
+                    <div id="tapMarker2" class="tabButtonMarker hide"></div>
+                </div>
+               <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTapMarker3()">Absence</button>
+                    <div id="tapMarker3" class="tabButtonMarker hide"></div>
+                </div>
+            </section>
+
+            <!--start All tap page -->
+            <section id="internalTapBodyMarker1" class="internalTapBody">
+                <div class="allAttendanceTap">
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>2/5/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:00:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:10:00PM</label>
+                    </div>
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Absence</label>
+                        <div class="divider">.</div>
+                        <label>1/5/2023</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>30/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>7:58:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:03:00PM</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>29/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:02:00AM</label>
+                        <div class="divider">.</div>
+                        <label>1:59:10PM</label>
+                    </div>
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Absence</label>
+                        <div class="divider">.</div>
+                        <label>28//2023</label>
+                    </div>
+                </div>
+            </section>
+            <!--end All tap page -->
+
+            <!--start Attendance tap page -->
+            <section id="internalTapBodyMarker2" class="internalTapBody hide">
+                <div class="attendanceTap">
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>2/5/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:00:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:10:00PM</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>30/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>7:58:00AM</label>
+                        <div class="divider">.</div>
+                        <label>2:03:00PM</label>
+                    </div>
+                    <div class="AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>29/4/2023</label>
+                        <div class="divider">.</div>
+                        <label>8:02:00AM</label>
+                        <div class="divider">.</div>
+                        <label>1:59:10PM</label>
+                    </div>
+                </div>
+            </section>
+            <!--end Attendance tap page -->
+
+            <!--start Absence tap page -->
+            <section id="internalTapBodyMarker3" class="internalTapBody hide">
+                <div class="absenceTap">
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>1/5/2023</label>
+                    </div>
+                    <div class="AbsenceDataField AttendanceDataField">
+                        <label>Attendance</label>
+                        <div class="divider">.</div>
+                        <label>28//2023</label>
+                    </div>
+                </div>
+            </section>
+            <!--end Absence tap page -->
+
+        </section>
+        <!--end Attendance tap page -->
+        
+        <!--start Tasks tap page -->
+        <section id="tapBodyMarker3" class="hide">
+            <section class="tapTapBar">
+                <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTaskTapMarker1()">In progress</button>
+                    <div id="taskTapMarker1" class="tabButtonMarker"></div>
+                </div>
+                <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTaskTapMarker2()">Completed</button>
+                    <div id="taskTapMarker2" class="tabButtonMarker hide"></div>
+                </div>
+               <div class="tabButtonBody">
+                    <button class="tabButton" onclick="openTaskTapMarker3()">On Hold</button>
+                    <div id="taskTapMarker3" class="tabButtonMarker hide"></div>
+                </div>
+            </section>
+            <!--start InProgress tap page -->
+            <section id="internalTaskTapBodyMarker1" class="internalTapBody">
+                <div class="taskDataField InProgress">
+                    <h1>Task Title</h1>
+                    <div class="taskData">
+                        <h3><span>Task Description: </span>Here is the description of the task, which is written during the creation of the task.</h3>
+                        <h3><span>Task Start Date: </span>10/5/2023.</h3>
+                        <h3><span>Task Duration: </span>5 Days.</h3>
+                        <h3><span>Task Finish Date: </span>15/5/2023.</h3>
+                    </div>
+                </div>
+                <div class="taskDataField InProgress">
+                    <h1>Task Title</h1>
+                    <div class="taskData">
+                        <h3><span>Task Description: </span>Here is the description of the task, which is written during the creation of the task.</h3>
+                        <h3><span>Task Start Date: </span>10/5/2023.</h3>
+                        <h3><span>Task Duration: </span>5 Days.</h3>
+                        <h3><span>Task Finish Date: </span>15/5/2023.</h3>
+                    </div>
+                </div>
+            </section>
+            <!--end InProgress tap page -->
+
+            <!--start Completed tap page -->
+            <section id="internalTaskTapBodyMarker2" class="internalTapBody hide">
+                <div class="taskDataField Completed">
+                    <h1>Task Title</h1>
+                    <div class="taskData">
+                        <h3><span>Task Description: </span>Here is the description of the task, which is written during the creation of the task.</h3>
+                        <h3><span>Task Start Date: </span>10/5/2023.</h3>
+                        <h3><span>Task Duration: </span>5 Days.</h3>
+                        <h3><span>Task Finish Date: </span>15/5/2023.</h3>
+                    </div>
+                </div>
+                <div class="taskDataField Completed">
+                    <h1>Task Title</h1>
+                    <div class="taskData">
+                        <h3><span>Task Description: </span>Here is the description of the task, which is written during the creation of the task.</h3>
+                        <h3><span>Task Start Date: </span>10/5/2023.</h3>
+                        <h3><span>Task Duration: </span>5 Days.</h3>
+                        <h3><span>Task Finish Date: </span>15/5/2023.</h3>
+                    </div>
+                </div>
+            </section>
+            <!--end Completed tap page -->
+            <!--start OnHold tap page -->
+            <section id="internalTaskTapBodyMarker3" class="internalTapBody hide">
+                <div class="taskDataField OnHold">
+                    <h1>Task Title</h1>
+                    <div class="taskData">
+                        <h3><span>Task Description: </span>Here is the description of the task, which is written during the creation of the task.</h3>
+                        <h3><span>Task Start Date: </span>10/5/2023.</h3>
+                        <h3><span>Task Duration: </span>5 Days.</h3>
+                        <h3><span>Task Finish Date: </span>15/5/2023.</h3>
+                    </div>
+                </div>
+                <div class="taskDataField OnHold">
+                    <h1>Task Title</h1>
+                    <div class="taskData">
+                        <h3><span>Task Description: </span>Here is the description of the task, which is written during the creation of the task.</h3>
+                        <h3><span>Task Start Date: </span>10/5/2023.</h3>
+                        <h3><span>Task Duration: </span>5 Days.</h3>
+                        <h3><span>Task Finish Date: </span>15/5/2023.</h3>
+                    </div>
+                </div>
+            </section>
+            <!--end OnHold tap page -->
+            
+        </section>
+        <!--end Tasks tap page -->
+
+        <!--start New tap page -->
+        <section id="tapBodyMarker4" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 4</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+
+        <!--start New tap page -->
+        <section id="tapBodyMarker5" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 5</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+
+        <!--start New tap page -->
+        <section id="tapBodyMarker6" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 6</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+
+        <!--start New tap page -->
+        <section id="tapBodyMarker7" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 7</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+        
+        <!--start New tap page -->
+        <section id="tapBodyMarker8" class="hide">
+            <section class="internalTapBody">
+                <h1>Tap 8</h1>
+            </section>
+        </section>
+        <!--end New tap page -->
+        
+        
+    </section>
+    <script src="../Js/jsScript.js"></script>
+</body>
+</html>

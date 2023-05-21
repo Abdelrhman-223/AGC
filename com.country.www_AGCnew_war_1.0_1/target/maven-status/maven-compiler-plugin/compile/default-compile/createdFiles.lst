@@ -1,0 +1,12 @@
+com\modern\www\_1_2_MySql_DB_entities\StudentCourses.class
+com\modern\www\_1_2_MySql_DB_entities\Courses.class
+com\modern\www\_1_1_MySql_DB_mainDao\AbstractDao.class
+com\modern\www\_1_2_MySql_DB_entities\Student.class
+Servlets\addStudentAjax.class
+Servlets\getStudentAjax.class
+com\modern\www\_1_2_MySql_DB_entities\StudentCoursesId.class
+jsonFiles\student_json.class
+com\modern\www\_1_1_MySql_DB_mainDao\HibernateSessionConMySql.class
+com\modern\www\_1_3_MySql_DB_daos\Student_DAO.class
+Servlets\deleteStudentAjax.class
+com\modern\www\_1_1_MySql_DB_mainDao\SessionProvider.class

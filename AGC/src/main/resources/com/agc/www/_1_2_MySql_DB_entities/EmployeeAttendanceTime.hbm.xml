@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2023 11:14:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.agc.www._1_2_MySql_DB_entities.EmployeeAttendanceTime" table="employee_attendance_time" catalog="agc_db" optimistic-lock="version">
+        <id name="employeeAttendanceId" type="int">
+            <column name="employee_attendance_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="employee" class="com.agc.www._1_2_MySql_DB_entities.Employee" fetch="select">
+            <column name="EmployeeID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="shift" class="com.agc.www._1_2_MySql_DB_entities.Shift" fetch="select">
+            <column name="ShiftID" not-null="true" />
+        </many-to-one>
+        <property name="attendanceStatus" type="string">
+            <column name="Attendance_status" length="6" not-null="true" />
+        </property>
+        <property name="attendanceDateTime" type="timestamp">
+            <column name="Attendance_date_time" length="19" not-null="true" />
+        </property>
+        <property name="departureDateTime" type="timestamp">
+            <column name="Departure_date_time" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 19, 2023 7:19:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.finalagc.www._1_2_MySql_DB_entities.Repair" table="repair" catalog="agc_db" optimistic-lock="version">
+        <id name="repairId" type="java.lang.Integer">
+            <column name="repair_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="employee" class="com.finalagc.www._1_2_MySql_DB_entities.Employee" fetch="select">
+            <column name="EmployeeID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="machine" class="com.finalagc.www._1_2_MySql_DB_entities.Machine" fetch="select">
+            <column name="Machine_ID" not-null="true" />
+        </many-to-one>
+        <property name="repairDateTime" type="timestamp">
+            <column name="Repair_date_time" length="19" not-null="true" />
+        </property>
+        <property name="repairsCost" type="float">
+            <column name="Repairs_cost" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="malfunction" type="string">
+            <column name="Malfunction" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
